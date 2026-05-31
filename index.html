@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- FONT AWESOME ИКОНКИ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- СТИЛИ -->
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/dark-mode.css">
+
+    <title>ArabicMaster - Платформа для изучения арабского языка</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo"> ArabicMaster</div>
+            <nav class="nav-menu">
+                <a href="#" data-page="home" class="nav-link active">Главная</a>
+                <a href="#" data-page="alphabet" class="nav-link">Алфавит</a>
+                <a href="#" data-page="dictionary" class="nav-link">Словарь</a>
+                <a href="#" data-page="tests" class="nav-link">Тесты</a>
+                <a href="#" data-page="progress" class="nav-link">Прогресс</a>
+            </nav>
+            <div class="header-right">
+                <button class="theme-btn" onclick="toggleTheme()" title="Переключить тему">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        
+        <!-- ГЛАВНАЯ СТРАНИЦА -->
+        <section id="home" class="page active">
+            <!-- BANNER -->
+            <div class="hero">
+                <h1>Добро пожаловать в ArabicMaster</h1>
+                <p class="subtitle">Учите арабский язык интерактивно и современно</p>
+            </div>
+
+            <!-- ВВЕДЕНИЕ ОБ АРАБСКОМ ЯЗЫКЕ -->
+            <div class="facts-section">
+                <div class="container">
+                    <h2 class="section-title">Добро пожаловать в мир арабского языка</h2>
+                    <div class="facts-text">
+                        <p>
+                            <strong>Арабский язык</strong> — это один из наиболее распространённых языков мира, на котором говорят более 400 миллионов человек. Это язык с богатой историей, охватывающей более семи веков. Арабский язык является официальным языком Организации Объединённых Наций и служит инструментом политического, культурного и экономического общения между десятками стран. Красота этого языка заключается в его глубокой философии, музыкальности и связи с исламской культурой и наследием.
+                        </p>
+                        <p>
+                            <strong>Арабское письмо</strong> — это уникальная система, состоящая из 28 букв, каждая из которых обладает собственным характером и звуком. Буквы соединяются между собой в словах, создавая плавные линии и элегантные формы, которые придают тексту особую красоту. Письмо читается справа налево, что отличает его от европейских систем. Каждая буква может изменять форму в зависимости от положения в слове (в начале, в конце или в середине), что делает арабское письмо особенным и требует внимательного изучения.
+                        </p>
+                        <p>
+                            <strong>Дополнительные знаки и огласовки</strong> (специальные диакритические знаки) используются для обозначения гласных звуков и облегчения чтения текстов. К ним относятся хамза ('), лам-алиф (ـلا), та мартуба (ة) и другие важные символы. Эти элементы часто опускаются в повседневном письме, но крайне важны для правильного произношения и понимания слов, особенно при изучении языка как иностранного.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- СТАТИСТИКА ПОЛЬЗОВАТЕЛЯ -->
+            <div class="container" style="margin-bottom: 60px;">
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="lettersCount">0</div>
+                        <div class="stat-label">букв выучено</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="wordsCount">0</div>
+                        <div class="stat-label">слов выучено</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="testsCount">0</div>
+                        <div class="stat-label">тестов пройдено</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- БЫСТРЫЙ ДОСТУП -->
+            <div class="container" style="margin-bottom: 60px;">
+                <h2 class="section-title">Быстрый доступ</h2>
+                <div class="quick-cards">
+                    <div class="quick-card" onclick="showPage('alphabet'); updateNav('alphabet')">
+                        <h3>📖 Арабский Алфавит</h3>
+                        <p>Изучите все 28 букв арабского языка с примерами и произношением</p>
+                        <div class="card-arrow">→</div>
+                    </div>
+                    <div class="quick-card" onclick="showPage('dictionary'); updateNav('dictionary')">
+                        <h3>📚 Словарь</h3>
+                        <p>Учите новые слова по тематическим категориям и проверяйте себя</p>
+                        <div class="card-arrow">→</div>
+                    </div>
+                    <div class="quick-card" onclick="showPage('tests'); updateNav('tests')">
+                        <h3>✏️ Тесты и Задания</h3>
+                        <p>Проверьте свои знания и отследите свой прогресс</p>
+                        <div class="card-arrow">→</div>
+                    </div>
+                </div>
+            </div>
+<!-- СЛАЙДЕР ПОСЛОВИЦ -->
+<div class="container" style="margin-bottom: 60px;">
+    <div class="quote-section proverb-slider">
+        <div class="proverb-arabic" id="proverbArabic"></div>
+        <div class="proverb-translit" id="proverbTranslit"></div>
+        <div class="proverb-translation" id="proverbTranslation"></div>
+    </div>
+</div>
+            <!-- КАК ИСПОЛЬЗОВАТЬ -->
+            <div class="container">
+                <div class="motivation-section">
+                    <h3>Как использовать платформу</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Выберите раздел</h4>
+                                <p>Начните с алфавита или выберите интересующую вас тему</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Изучайте материал</h4>
+                                <p>Кликайте на буквы и слова чтобы узнать больше</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Проходите тесты</h4>
+                                <p>Проверяйте знания и видьте свой прогресс</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- РАЗДЕЛ АЛФАВИТ -->
+        <section id="alphabet" class="page">
+            <div class="container">
+                <h2 class="section-title">Арабский алфавит (28 букв)</h2>
+                <div class="alphabet-grid" id="alphabetGrid"></div>
+            </div>
+            
+            <!-- ДОПОЛНИТЕЛЬНЫЕ СИМВОЛЫ И ОБОЗНАЧЕНИЯ -->
+            <div class="container" style="margin-top: 60px;">
+                <h2 class="section-title">Дополнительные символы и обозначения</h2>
+                <div class="additional-symbols">
+                    <div class="symbol-item">
+                        <h3>Хамза (ء)</h3>
+                        <p>Хамза — это согласный звук, обозначающий смыкание голосовых связок. Является одной из 28 букв арабского алфавита. Часто пишется над или под буквой алиф, реже над буквами вав или йа, может существовать самостоятельно на базовой линии.</p>
+                    </div>
+                    <div class="symbol-item">
+                        <h3>Лам-Алиф (لا)</h3>
+                        <p>Это лигатура, образованная комбинацией букв лам и алиф. При соединении эти две буквы создают специальный символ, который часто встречается в арабских текстах. Лам-алиф имеет особую форму и не разбивается при написании в большинстве случаев.</p>
+                    </div>
+                    <div class="symbol-item">
+                        <h3>Та мартуба (ة)</h3>
+                        <p>Та мартуба (буквально «связанная та») — это форма буквы та, используемая в конце слова для образования женского рода. Произносится как 'э' в конце слова. Это очень важный символ в арабском языке для обозначения женского рода имён существительных и прилагательных.</p>
+                    </div>
+                    <div class="symbol-item">
+                        <h3>Огласовки (Диакритические знаки)</h3>
+                        <p>Огласовки — это специальные значки (точки и символы), расположенные над и под буквами для обозначения гласных звуков. К ним относятся фатха (َ), дамма (ُ), касра (ِ) и другие. Они часто опускаются в обычном письме, но использутся в Коране, словарях и при обучении.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- МОДАЛЬНОЕ ОКНО ДЛЯ БУКВ -->
+            <div id="letterModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h3 id="modalLetter"></h3>
+                    <p><strong>Название:</strong> <span id="modalName"></span></p>
+                    <p><strong>Транскрипция:</strong> <span id="modalTranscription"></span></p>
+                    <p><strong>Примеры:</strong></p>
+                    <ul id="modalExamples"></ul>
+                    <div class="modal-video-section" id="videoSection" style="display: none; margin-top: 20px; border-top: 1px solid #ddd; padding-top: 15px;">
+                        <p><strong>Видео урок:</strong></p>
+                        <a id="videoLink" class="video-btn" href="#" target="_blank">
+                            <i class="fas fa-video"></i> Смотреть с правильным махраджом
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- РАЗДЕЛ СЛОВАРЬ -->
+        <section id="dictionary" class="page">
+            <div class="container">
+                <h2 class="section-title">Словарь</h2>
+                <div class="dictionary-themes" id="dictionaryThemes"></div>
+                
+                <div id="wordsList" class="words-list" style="display: none;">
+                    <button onclick="backToDictionary()" class="back-btn">← Назад к темам</button>
+                    <div id="wordsContainer"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- РАЗДЕЛ ТЕСТЫ -->
+        <section id="tests" class="page">
+            <div class="container">
+                <h2 class="section-title">Тесты и проверка знаний</h2>
+                <div id="testSelector" class="test-selector">
+                    <button class="test-btn" onclick="startTest('alphabet')">Тест по алфавиту</button>
+                    <button class="test-btn" onclick="startTest('vocabulary')">Тест по словам</button>
+                </div>
+                
+                <div id="testContainer" style="display: none;">
+                    <button onclick="backToTests()" class="back-btn">← Назад</button>
+                    <div id="testContent"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- РАЗДЕЛ ПРОГРЕСС -->
+        <section id="progress" class="page">
+            <div class="container">
+                <h2 class="section-title">Мой прогресс обучения</h2>
+                <div class="progress-stats">
+                    <div class="progress-item">
+                        <h3>Буквы</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="letterProgress" style="width: 0%"></div>
+                        </div>
+                        <p><span id="letterProgressText">0</span> из 28</p>
+                    </div>
+                    <div class="progress-item">
+                        <h3>Слова</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="wordProgress" style="width: 0%"></div>
+                        </div>
+                        <p><span id="wordProgressText">0</span> из 120</p>
+                    </div>
+                </div>
+
+                <div class="learned-list">
+                    <h3>Выученные буквы</h3>
+                    <div id="learnedLetters" class="letters-display"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">Курсовой проект 2026</div>
+            <div class="footer-center">Выполнил: Абдуллоев О.О., группа ПИЖ-б-о-25-1(1)</div>
+            <div class="footer-right">
+                <a href="https://t.me/abdulloevo7" target="_blank" title="Telegram" class="contact-link">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="mailto:abdulloevorifon@gmail.com" title="Email" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/Abdulloevo7" target="_blank" title="GitHub" class="contact-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">Все данные сохраняются локально в браузере</div>
+    </footer>
+
+    <!-- СКРИПТ -->
+    <script src="script.js"></script>
+</body>
+</html>

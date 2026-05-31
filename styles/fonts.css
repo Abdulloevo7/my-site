@@ -1,0 +1,118 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+/* ПЕРЕМЕННЫЕ ШРИФТОВ */
+:root {
+    --font-arabic: 'Amiri', serif;
+    --font-russian: 'Inter', sans-serif;
+    --font-display: 'Playfair Display', serif;
+    --font-size-base: 16px;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+}
+
+/* ARABIC TEXT */
+.amiri-regular {
+    font-family: var(--font-arabic);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.amiri-bold {
+    font-family: var(--font-arabic);
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* РУССКИЙ ТЕКСТ */
+.inter-light {
+    font-family: var(--font-russian);
+    font-weight: 300;
+}
+
+.inter-regular {
+    font-family: var(--font-russian);
+    font-weight: 400;
+}
+
+.inter-medium {
+    font-family: var(--font-russian);
+    font-weight: 500;
+}
+
+.inter-bold {
+    font-family: var(--font-russian);
+    font-weight: 700;
+}
+
+/* ДИСПЛЕЙ ШРИФТ */
+.playfair-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+/* ПРИМЕНЕНИЕ ШРИФТОВ К ЭЛЕМЕНТАМ */
+html {
+    font-family: var(--font-russian);
+    font-size: var(--font-size-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+/* АРАБСКИЙ ТЕКСТ */
+[lang="ar"],
+.arabic {
+    font-family: var(--font-arabic);
+    direction: rtl;
+    text-align: right;
+}
+
+/* ОПТИМИЗАЦИЯ ШРИФТОВ */
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* КАСТОМНЫЕ СТИЛИ */
+.logo {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ШРИФТЫ ДЛЯ КНОПОК */
+button, .btn {
+    font-family: var(--font-russian);
+    font-weight: 600;
+}
+
+/* ШРИФТЫ ДЛЯ КАРТОЧЕК */
+.card h3, .fact-card {
+    font-family: var(--font-russian);
+    font-weight: 600;
+}

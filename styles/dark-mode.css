@@ -1,0 +1,198 @@
+/* ========== dark.css – переопределения для тёмной темы ========== */
+body.dark-mode {
+    --dark-bg: #2a2b2a;
+    --dark-card: #3a3c3a;
+    --dark-text: #fff;
+    --dark-text-light: #ccc;
+    background: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark-mode .card-bg,
+body.dark-mode .modal-content,
+body.dark-mode .fact-card,
+body.dark-mode .stat-card,
+body.dark-mode .access-card,
+body.dark-mode .letter-card,
+body.dark-mode .word-card,
+body.dark-mode .progress-item,
+body.dark-mode .learned-list {
+    background: var(--dark-card);
+    color: var(--dark-text);
+}
+
+body.dark-mode .text-light,
+body.dark-mode .card-text,
+body.dark-mode .banner-description {
+    color: var(--dark-text-light);
+}
+
+body.dark-mode .header {
+    background: linear-gradient(135deg, #1a5530 0%, #2d7a45 100%);
+    border-bottom: 2px solid var(--accent);
+}
+body.dark-mode .footer {
+    background: linear-gradient(135deg, #1a5530 0%, #2d7a45 100%);
+    border-top: 2px solid var(--accent);
+}
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #1a5530, #2d7a45);
+}
+
+body.dark-mode .letter-card {
+    border-color: #333;
+}
+body.dark-mode .letter-card:hover {
+    border-color: var(--accent);
+}
+/* Модальное окно в тёмной теме: белый фон, тёмно-зелёный текст */
+body.dark-mode .modal-content {
+    background: #ffffff !important;
+    color: var(--primary, #1a472a) !important;
+    border-top: 5px solid var(--accent, #d4af37) !important;
+}
+
+
+/* Заголовок (арабская буква) – тёмно-зелёный */
+body.dark-mode .modal-content h3 {
+    color: var(--primary, #1a472a) !important;
+}
+
+/* Остальной текст (название, транскрипция, примеры) – тёмно-зелёный */
+body.dark-mode .modal-content p,
+body.dark-mode .modal-content li,
+body.dark-mode .modal-content strong {
+    color: var(--primary, #1a472a) !important;
+}
+
+/* Ссылка на видео – золотая, чтобы выделялась */
+body.dark-mode .modal-content .video-btn {
+    background: var(--accent, #d4af37) !important;
+    color: var(--primary, #1a472a) !important;
+    border-color: var(--primary, #1a472a) !important;
+}
+
+/* Кнопка закрытия (крестик) – тёмно-зелёная */
+body.dark-mode .modal-content .close {
+    color: var(--primary, #1a472a) !important;
+}
+body.dark-mode .modal-content .close:hover {
+    color: var(--accent, #d4af37) !important;
+}
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: var(--accent);
+}
+body.dark-mode .quick-card {
+    border-left: 4px dashed #666;
+}
+body.dark-mode .quick-card h3 {
+    color: var(--accent, #d4af37) !important;
+}
+body.dark-mode .facts-text p {
+    border-bottom: 2px dashed #333;
+}
+body.dark-mode .facts-text strong {
+    color: var(--accent);
+}
+body.dark-mode .back-btn {
+    background: var(--accent);
+    color: var(--primary);
+}
+body.dark-mode .word-ar {
+    color: var(--accent);
+}
+body.dark-mode .symbol-item {
+    border-left: 4px dashed #666;
+}
+body.dark-mode .symbol-item h3 {
+    color: var(--accent);
+}
+body.dark-mode .symbol-item p {
+    color: var(--dark-text-light);
+}
+body.dark-mode .modal-video {
+    border-top: 2px solid #333;
+}
+body.dark-mode .modal-video h4 {
+    color: var(--accent);
+}
+
+/* Исправления для читаемости (проблемы 1-4) */
+body.dark-mode .facts-text p,
+body.dark-mode .facts-text strong,
+body.dark-mode .hero .subtitle {
+    color: #ffffff !important;
+}
+
+body.dark-mode .stat-card {
+    background: linear-gradient(135deg, var(--primary, #1a472a), var(--accent, #d4af37)) !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3) !important;
+}
+body.dark-mode .progress-item {
+    background: #2a2a2a !important;
+}
+body.dark-mode .stat-number,
+body.dark-mode .stat-label,
+body.dark-mode .progress-item p,
+body.dark-mode .progress-item h3,
+body.dark-mode .progress-value,
+body.dark-mode .progress-label {
+    color: #ffffff !important;
+}
+
+body.dark-mode .letter-card {
+    background: #2a2a2a !important;
+    color: #ffffff !important;
+}
+body.dark-mode .letter-card.learned {
+    background: var(--accent) !important;
+    color: var(--primary) !important;
+}
+body.dark-mode .symbol-item {
+    background: var(--accent, #d4af37) !important;
+}
+body.dark-mode .symbol-item h3 {
+    color: var(--primary, #1a472a) !important;
+}
+body.dark-mode .symbol-item p {
+    color: #ffffff !important;
+}
+
+body.dark-mode .theme-card {
+    background: var(--accent, #d4af37) !important;       
+    border-top: 4px solid var(--primary, #1a472a) !important; 
+}
+body.dark-mode .theme-card h3,
+body.dark-mode .theme-card p {
+    color: var(--primary, #1a472a) !important;
+}
+
+body.dark-mode .word-card {
+    background: var(--accent, #d4af37) !important;
+    border-left: 4px solid  #1a472a !important;     
+}
+body.dark-mode .word-ar,
+body.dark-mode .word-ru {
+    color: var(--primary, #1a472a) !important;
+}
+/* Невыученные – ярко-зелёный градиент, чтобы выделяться */
+body.dark-mode .mark-btn {
+    background: linear-gradient(135deg, #1a5530, #2d7a45);
+    color: #ffffff;
+}
+
+/* Выученные – тёмно-зелёный, сливается с фоном */
+body.dark-mode .mark-btn.learned {
+    background: #1a3a2a;
+    color: #aaaaaa;
+}
+body.dark-mode .test-content p,
+body.dark-mode .test-content h4 {
+    color: #000000 !important;
+}
+body.dark-mode .progress-item {
+    background: var(--dark-card, #2a2a2a) !important;
+}

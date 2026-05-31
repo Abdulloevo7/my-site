@@ -1009,32 +1009,179 @@ background-image: url('../images/fon1.webp');
 .video-btn i {
     margin-right: 8px;
 }
-
 @media (max-width: 768px) {
+    /* Общие настройки */
+    body {
+        font-size: 14px; /* уменьшаем базовый шрифт */
+    }
+
+    /* Заголовки */
     .hero h1 {
         font-size: 1.8rem;
     }
+    .subtitle {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    h2, h3, h4 {
+        font-size: 1.2rem;
+    }
 
+    /* Навигация */
     .nav-menu {
         flex-wrap: wrap;
         gap: 15px;
     }
-
-    .alphabet-grid {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr;
-    }
-
     .header-container {
         flex-direction: column;
         gap: 15px;
     }
 
+    /* Алфавит */
+    .alphabet-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+
+    /* Быстрые карточки */
+    .quick-card {
+        padding: 20px;
+    }
+    .quick-card h3 {
+        font-size: 1.1rem;
+    }
+    .quick-card p {
+        font-size: 0.85rem;
+    }
+
+    /* Раздел прогресс – исправляем выпадение */
+    .progress-stats {
+        grid-template-columns: 1fr; /* карточки «Буквы» и «Слова» идут вертикально */
+        gap: 15px;
+    }
+    .progress-item {
+        padding: 15px;
+    }
+    .progress-item h3 {
+        font-size: 1rem;
+    }
+    .progress-item p {
+        font-size: 0.8rem;
+    }
+    .progress-bar {
+        height: 15px;
+    }
+
+    /* Текст в статистике на главной */
+    .stats {
+        gap: 10px;
+    }
+    .stat-card {
+        padding: 10px;
+    }
+    .stat-number {
+        font-size: 1.4rem;
+    }
+    .stat-label {
+        font-size: 0.7rem;
+    }
+
+    /* Пословицы */
+    .proverb-arabic {
+        font-size: 1.5rem;
+    }
+    .proverb-translit {
+        font-size: 1rem;
+    }
+    .proverb-translation {
+        font-size: 1rem;
+    }
+
+    /* Тесты */
+    .test-btn {
+        padding: 20px;
+        font-size: 1rem;
+    }
+    .test-option {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .test-content h4 {
+        font-size: 1.2rem !important;
+    }
+    .test-content p {
+        font-size: 1rem !important;
+    }
+
+    /* Словарь */
+    .theme-card {
+        padding: 15px;
+    }
+    .theme-card h3 {
+        font-size: 1rem;
+    }
+    .word-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .word-ar {
+        font-size: 1.2rem;
+    }
+    .word-ru {
+        font-size: 0.9rem;
+    }
+    .mark-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    /* Дополнительные символы */
+    .additional-symbols {
+        gap: 15px;
+    }
+    .symbol-item {
+        padding: 15px;
+    }
+    .symbol-item h3 {
+        font-size: 1rem;
+    }
+    .symbol-item p {
+        font-size: 0.85rem;
+    }
+
+    /* Футер */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .footer-section p {
+        font-size: 0.8rem;
+    }
+    .contact-link {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    /* Мотивация */
     .steps {
         grid-template-columns: 1fr;
     }
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    .step-content h4 {
+        font-size: 1rem;
+    }
+    .step-content p {
+        font-size: 0.8rem;
+    }
 }
+
+
   

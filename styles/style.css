@@ -652,9 +652,9 @@ a {
     background-image: url('../images/fon2.webp');
     background-size: cover;
     background-position: center;
-    opacity: 0.08;      /* едва заметно, регулируйте */
+    opacity: 0.08;      
     z-index: 0;
-    pointer-events: none; /* чтобы можно было кликать по кнопке */
+    pointer-events: none; 
 -webkit-mask: radial-gradient(circle at center, black 40%, transparent 90%);
 mask: radial-gradient(circle at center, black 40%, transparent 90%);
 }
@@ -686,7 +686,6 @@ mask: radial-gradient(circle at center, black 40%, transparent 90%);
     transition: all 0.3s ease;
 }
 
-/* Кнопка для выученных слов – темнее, приглушённая */
 .mark-btn.learned {
     background: #0a2a1a;
     color: #cccccc;

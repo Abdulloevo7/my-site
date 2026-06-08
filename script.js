@@ -39,38 +39,36 @@ const proverbs = [
     }
 ];
 
-// АРАБСКИЙ АЛФАВИТ (28 букв) — примеры с огласовками
 const alphabet = [
-    { letter: 'ا', name: 'Алиф', transcription: 'ā', examples: 'أُمٌّ (мать), أَبٌ (отец), آمِنٌ (безопасный)', videoUrl: 'https://www.youtube.com/embed/video_alif' },
-    { letter: 'ب', name: 'Ба', transcription: 'b', examples: 'بَيْتٌ (дом), بَابٌ (дверь), بَحْرٌ (море)', videoUrl: 'https://www.youtube.com/embed/video_ba' },
-    { letter: 'ت', name: 'Та', transcription: 't', examples: 'تَاجٌ (корона), تَمْرٌ (финик), تِمْثَالٌ (статуя)', videoUrl: 'https://www.youtube.com/embed/video_ta' },
-    { letter: 'ث', name: 'Са', transcription: 'th', examples: 'ثَلْجٌ (снег), ثَلَاثَةٌ (три), ثَقَافَةٌ (культура)', videoUrl: 'https://www.youtube.com/embed/video_tha' },
-    { letter: 'ج', name: 'Джим', transcription: 'j', examples: 'جَبَلٌ (гора), جَمَلٌ (верблюд), جَمِيلٌ (красивый)', videoUrl: 'https://www.youtube.com/embed/video_jim' },
-    { letter: 'ح', name: 'Ха', transcription: 'ḥ', examples: 'حَجٌّ (хадж), حِمَارٌ (осёл), حُلْمٌ (сон)', videoUrl: 'https://www.youtube.com/embed/video_ha' },
-    { letter: 'خ', name: 'Ха (гортанная)', transcription: 'kh', examples: 'خُبْزٌ (хлеб), خُطُوطٌ (линии), خَيْلٌ (конь)', videoUrl: 'https://www.youtube.com/embed/video_khah' },
-    { letter: 'د', name: 'Дал', transcription: 'd', examples: 'دَرْسٌ (урок), دَمٌ (кровь), دَاخِلٌ (внутри)', videoUrl: 'https://www.youtube.com/embed/video_dal' },
-    { letter: 'ذ', name: 'Заль', transcription: 'dh', examples: 'ذَهَبٌ (золото), ذِئْبٌ (волк), ذَاكِرَةٌ (память)', videoUrl: 'https://www.youtube.com/embed/video_dhal' },
-    { letter: 'ر', name: 'Ра', transcription: 'r', examples: 'رَمْلٌ (песок), رَجُلٌ (мужчина), رَحْمَةٌ (милость)', videoUrl: 'https://www.youtube.com/embed/video_ra' },
-    { letter: 'ز', name: 'Зай', transcription: 'z', examples: 'زَهْرٌ (цветок), زَمَنٌ (время), زَيْتٌ (масло)', videoUrl: 'https://www.youtube.com/embed/video_zay' },
-    { letter: 'س', name: 'Син', transcription: 's', examples: 'سَمَاءٌ (небо), سَلَامٌ (мир), سَيْفٌ (меч)', videoUrl: 'https://www.youtube.com/embed/video_sin' },
-    { letter: 'ش', name: 'Шин', transcription: 'sh', examples: 'شَمْسٌ (солнце), شَرَابٌ (напиток), شَاعِرٌ (поэт)', videoUrl: 'https://www.youtube.com/embed/video_shin' },
-    { letter: 'ص', name: 'Сад', transcription: 'ṣ', examples: 'صَوْتٌ (звук), صَيْفٌ (лето), صَبْرٌ (терпение)', videoUrl: 'https://www.youtube.com/embed/video_sad' },
-    { letter: 'ض', name: 'Дад', transcription: 'ḍ', examples: 'ضَرْبٌ (удар), ضَوْءٌ (свет), ضَحِكٌ (смех)', videoUrl: 'https://www.youtube.com/embed/video_dad' },
-    { letter: 'ط', name: 'Та (эмфатический)', transcription: 'ṭ', examples: 'طَاوِلَةٌ (стол), طَائِرٌ (птица), طَعَامٌ (пища)', videoUrl: 'https://www.youtube.com/embed/video_tah' },
-    { letter: 'ظ', name: 'За (эмфатический)', transcription: 'ẓ', examples: 'ظِلٌّ (тень), ظَهْرٌ (спина), ظَرْفٌ (конверт)', videoUrl: 'https://www.youtube.com/embed/video_zah' },
-    { letter: 'ع', name: 'Айн', transcription: 'ʿ (ayn)', examples: 'عَيْنٌ (глаз), عَقْلٌ (ум), عَدْلٌ (справедливость)', videoUrl: 'https://www.youtube.com/embed/video_ayn' },
-    { letter: 'غ', name: 'Гайн', transcription: 'gh', examples: 'غَارٌ (пещера), غَرْبٌ (запад), غَابَةٌ (лес)', videoUrl: 'https://www.youtube.com/embed/video_ghain' },
-    { letter: 'ف', name: 'Фа', transcription: 'f', examples: 'فَرَحٌ (радость), فَمٌ (рот), فَنِّيٌّ (художник)', videoUrl: 'https://www.youtube.com/embed/video_fa' },
-    { letter: 'ق', name: 'Каф (увулярный)', transcription: 'q', examples: 'قَلْبٌ (сердце), قَمَرٌ (луна), قُوَّةٌ (сила)', videoUrl: 'https://www.youtube.com/embed/video_qaf' },
-    { letter: 'ك', name: 'Каф (обычный)', transcription: 'k', examples: 'كِتَابٌ (книга), كَلَامٌ (слова), كُرْسِيٌّ (стул)', videoUrl: 'https://www.youtube.com/embed/video_kaf' },
-    { letter: 'ل', name: 'Лам', transcription: 'l', examples: 'لَيْلٌ (ночь), لَوْنٌ (цвет), لِسَانٌ (язык)', videoUrl: 'https://www.youtube.com/embed/video_lam' },
-    { letter: 'م', name: 'Мим', transcription: 'm', examples: 'مَاءٌ (вода), مَدْرَسَةٌ (школа), مَلِكٌ (король)', videoUrl: 'https://www.youtube.com/embed/video_mim' },
-    { letter: 'ن', name: 'Нун', transcription: 'n', examples: 'نَارٌ (огонь), نَجْمٌ (звезда), نِيلٌ (Нил)', videoUrl: 'https://www.youtube.com/embed/video_nun' },
-    { letter: 'ه', name: 'Ха (придыхательный)', transcription: 'h', examples: 'هَدِيَّةٌ (подарок), هِنْدٌ (Индия), هَدَفٌ (цель)', videoUrl: 'https://www.youtube.com/embed/video_hah' },
-    { letter: 'و', name: 'Вав', transcription: 'w', examples: 'وَجْهٌ (лицо), وَادٍ (долина), وَقْتٌ (время)', videoUrl: 'https://www.youtube.com/embed/video_waw' },
-    { letter: 'ي', name: 'Йа', transcription: 'y', examples: 'يَدٌ (рука), يَوْمٌ (день), يَاقُوتٌ (рубин)', videoUrl: 'https://www.youtube.com/embed/video_ya' }
+    { letter: 'ا', name: 'Алиф', transcription: 'ā', examples: 'أُمٌّ (мать), أَبٌ (отец), آمِنٌ (безопасный)', videoUrl: 'https://youtu.be/tgRsZrY60RU?si=qt6tEz4n6vusXnbv' },
+    { letter: 'ب', name: 'Ба', transcription: 'b', examples: 'بَيْتٌ (дом), بَابٌ (дверь), بَحْرٌ (море)', videoUrl: 'https://youtu.be/dbluDNbH7rs?si=0qQGf2L9-e_6wtJo' },
+    { letter: 'ت', name: 'Та', transcription: 't', examples: 'تَاجٌ (корона), تَمْرٌ (финик), تِمْثَالٌ (статуя)', videoUrl: 'https://youtu.be/D0wDR6wn1H8?si=ttYWTJy8YNFeKTvP' },
+    { letter: 'ث', name: 'Са', transcription: 'th', examples: 'ثَلْجٌ (снег), ثَلَاثَةٌ (три), ثَقَافَةٌ (культура)', videoUrl: 'https://youtu.be/NA2SMgAViRs?si=n_V3DYngNfqj2NTE' },
+    { letter: 'ج', name: 'Джим', transcription: 'j', examples: 'جَبَلٌ (гора), جَمَلٌ (верблюд), جَمِيلٌ (красивый)', videoUrl: 'https://youtu.be/skTCpXgtXrI?si=979NxMzQyup592o9' },
+    { letter: 'ح', name: 'Ха', transcription: 'ḥ', examples: 'حَجٌّ (хадж), حِمَارٌ (осёл), حُلْمٌ (сон)', videoUrl: 'https://youtu.be/7T0TyhOkHTE?si=ro5j8_KcjunEEGXt' },
+    { letter: 'خ', name: 'Ха (гортанная)', transcription: 'kh', examples: 'خُبْزٌ (хлеб), خُطُوطٌ (линии), خَيْلٌ (конь)', videoUrl: 'https://youtu.be/VQP5nxUGtyU?si=a17xgxvq8qBnQAFe' },
+    { letter: 'د', name: 'Дал', transcription: 'd', examples: 'دَرْسٌ (урок), دَمٌ (кровь), دَاخِلٌ (внутри)', videoUrl: 'https://youtu.be/zkLimlRAIZM?si=-IHlrSdoNt9aJNkq' },
+    { letter: 'ذ', name: 'Заль', transcription: 'dh', examples: 'ذَهَبٌ (золото), ذِئْبٌ (волк), ذَاكِرَةٌ (память)', videoUrl: 'https://youtu.be/EnsQtbqU5JE?si=MFPD5NT2jX1UbY22' },
+    { letter: 'ر', name: 'Ра', transcription: 'r', examples: 'رَمْلٌ (песок), رَجُلٌ (мужчина), رَحْمَةٌ (милость)', videoUrl: 'https://youtu.be/W35qxVgdkog?si=nrDyYv_l3St6FfXq' },
+    { letter: 'ز', name: 'Зай', transcription: 'z', examples: 'زَهْرٌ (цветок), زَمَنٌ (время), زَيْتٌ (масло)', videoUrl: 'https://youtu.be/qpng43Fjdm8?si=-kzGGHbcnugHyW2L' },
+    { letter: 'س', name: 'Син', transcription: 's', examples: 'سَمَاءٌ (небо), سَلَامٌ (мир), سَيْفٌ (меч)', videoUrl: 'https://youtu.be/DlUIMRBL5y4?si=98SL7ciA_3dN-yoD' },
+    { letter: 'ش', name: 'Шин', transcription: 'sh', examples: 'شَمْسٌ (солнце), شَرَابٌ (напиток), شَاعِرٌ (поэт)', videoUrl: 'https://youtu.be/730Pa-es57I?si=-tURk2cixNEsw2EK' },
+    { letter: 'ص', name: 'Сад', transcription: 'ṣ', examples: 'صَوْتٌ (звук), صَيْفٌ (лето), صَبْرٌ (терпение)', videoUrl: 'https://youtu.be/QmJYu-yq7nw?si=mpYK4pVtaqSB8o05' },
+    { letter: 'ض', name: 'Дад', transcription: 'ḍ', examples: 'ضَرْبٌ (удар), ضَوْءٌ (свет), ضَحِكٌ (смех)', videoUrl: 'https://youtu.be/XryqnUv2kTQ?si=y46oCKe5SWBttd9V' },
+    { letter: 'ط', name: 'Та (эмфатический)', transcription: 'ṭ', examples: 'طَاوِلَةٌ (стол), طَائِرٌ (птица), طَعَامٌ (пища)', videoUrl: 'https://youtu.be/nNG3ykY-82U?si=FJZXLSsabXTmdKY5' },
+    { letter: 'ظ', name: 'За (эмфатический)', transcription: 'ẓ', examples: 'ظِلٌّ (тень), ظَهْرٌ (спина), ظَرْفٌ (конверт)', videoUrl: 'https://youtu.be/EkRv9P4dAVg?si=RNsuewKlwU4FhDiz' },
+    { letter: 'ع', name: 'Айн', transcription: 'ʿ (ayn)', examples: 'عَيْنٌ (глаз), عَقْلٌ (ум), عَدْلٌ (справедливость)', videoUrl: 'https://youtu.be/1hGmiG8vi-0?si=qhvY0DppkDc49wZS' },
+    { letter: 'غ', name: 'Гайн', transcription: 'gh', examples: 'غَارٌ (пещера), غَرْبٌ (запад), غَابَةٌ (лес)', videoUrl: 'https://youtu.be/2xt5AAY5D_g?si=i1U9ka3Gcq537ouY' },
+    { letter: 'ف', name: 'Фа', transcription: 'f', examples: 'فَرَحٌ (радость), فَمٌ (рот), فَنِّيٌّ (художник)', videoUrl: 'https://youtu.be/fJjf4VXUREY?si=spKGhD8WHQIW_Nml' },
+    { letter: 'ق', name: 'Каф (увулярный)', transcription: 'q', examples: 'قَلْبٌ (сердце), قَمَرٌ (луна), قُوَّةٌ (сила)', videoUrl: 'https://youtu.be/r8PVsCO5TsE?si=RQGTCSpY9SneNU5A' },
+    { letter: 'ك', name: 'Каф (обычный)', transcription: 'k', examples: 'كِتَابٌ (книга), كَلَامٌ (слова), كُرْسِيٌّ (стул)', videoUrl: 'https://youtu.be/CGgCqOa1y1Y?si=Bohy7htlDUnSHGDx' },
+    { letter: 'ل', name: 'Лам', transcription: 'l', examples: 'لَيْلٌ (ночь), لَوْنٌ (цвет), لِسَانٌ (язык)', videoUrl: 'https://youtu.be/gDMM2h_BrMA?si=ZuwCyIPo70jF1NAv' },
+    { letter: 'م', name: 'Мим', transcription: 'm', examples: 'مَاءٌ (вода), مَدْرَسَةٌ (школа), مَلِكٌ (король)', videoUrl: 'https://youtu.be/rd1-CkcEjco?si=R_fcVBoLK3O8KJja' },
+    { letter: 'ن', name: 'Нун', transcription: 'n', examples: 'نَارٌ (огонь), نَجْمٌ (звезда), نِيلٌ (Нил)', videoUrl: 'https://youtu.be/ELa5ebrThiw?si=WS7JgE4XjruxIwy8' },
+    { letter: 'ه', name: 'Ха (придыхательный)', transcription: 'h', examples: 'هَدِيَّةٌ (подарок), هِنْدٌ (Индия), هَدَفٌ (цель)', videoUrl: 'https://youtu.be/7cMLivBh6sQ?si=qn61gi3M-rf1YRVK' },
+    { letter: 'و', name: 'Вав', transcription: 'w', examples: 'وَجْهٌ (лицо), وَادٍ (долина), وَقْتٌ (время)', videoUrl: 'https://youtu.be/vaPLTBB-feI?si=7w0GyEzmmT2lZkPc' },
+    { letter: 'ي', name: 'Йа', transcription: 'y', examples: 'يَدٌ (рука), يَوْمٌ (день), يَاقُوتٌ (рубин)', videoUrl: 'https://youtu.be/X4-XbMLXV7M?si=N6ECE5MifHOBYOY1' }
 ];
-
 // СЛОВАРЬ ПО ТЕМАМ — ВСЕ СЛОВА С ОГЛАСОВКАМИ
 const dictionary = {
     greetings: {

@@ -1,5 +1,5 @@
 
-/* ========== ЧАСТЬ 1: ДАННЫЕ И КОНСТАНТЫ ========== */
+/* ========== ЧАСТЬ 1: ДАННЫЕ И КОНСТАНТЫ */
 
 const proverbs = [
     {
@@ -149,7 +149,7 @@ let appState = {
     testResults: JSON.parse(localStorage.getItem('testResults')) || []
 };
 
-/* ========== ЧАСТЬ 2: ИНИЦИАЛИЗАЦИЯ ========== */
+/* ========== ЧАСТЬ 2: ИНИЦИАЛИЗАЦИЯ  */
 
 document.addEventListener('DOMContentLoaded', function() {
     applyTheme();
@@ -172,7 +172,7 @@ function setupNavigation() {
     });
 }
 
-/* ========== ЧАСТЬ 3: НАВИГАЦИЯ ========== */
+/* ========== ЧАСТЬ 3: НАВИГАЦИЯ  */
 
 function showPage(pageName) {
     const pages = document.querySelectorAll('.page');
@@ -194,7 +194,7 @@ function updateNav(pageName) {
     });
 }
 
-/* ========== ЧАСТЬ 4: ТЕМА ОФОРМЛЕНИЯ ========== */
+/* ========== ЧАСТЬ 4: ТЕМА ОФОРМЛЕНИЯ  */
 
 function toggleTheme() {
     appState.theme = appState.theme === 'light' ? 'dark' : 'light';
@@ -210,7 +210,7 @@ function applyTheme() {
     }
 }
 
-// ========== СЛУЧАЙНАЯ ПОСЛОВИЦА ==========
+// ========== СЛУЧАЙНАЯ ПОСЛОВИЦА 
 function displayRandomProverb() {
     const arabicEl = document.getElementById('proverbArabic');
     const translitEl = document.getElementById('proverbTranslit');
@@ -228,7 +228,7 @@ function displayRandomProverb() {
 
 document.addEventListener('DOMContentLoaded', displayRandomProverb);
 
-/* ========== ЧАСТЬ 5: АЛФАВИТ ========== */
+/* ========== ЧАСТЬ 5: АЛФАВИТ  */
 
 function renderAlphabet() {
     const grid = document.getElementById('alphabetGrid');
@@ -284,7 +284,7 @@ function closeModal() {
     document.getElementById('letterModal').classList.remove('active');
 }
 
-// ========== ЧАСТЬ 6: СЛОВАРЬ ==========
+// ========== ЧАСТЬ 6: СЛОВАРЬ 
 
 function renderDictionary() {
     const container = document.getElementById('dictionaryThemes');
@@ -351,7 +351,7 @@ function backToDictionary() {
     document.getElementById('wordsList').style.display = 'none';
 }
 
-/* ========== ЧАСТЬ 7: ТЕСТЫ ========== */
+/* ========== ЧАСТЬ 7: ТЕСТЫ  */
 
 function startTest(type) {
     document.getElementById('testSelector').style.display = 'none';
@@ -452,7 +452,7 @@ function backToTests() {
     document.getElementById('testContainer').style.display = 'none';
 }
 
-/* ========== ЧАСТЬ 8: СТАТИСТИКА И ПРОГРЕСС ========== */
+/* ========== ЧАСТЬ 8: СТАТИСТИКА И ПРОГРЕСС  */
 
 function updateStats() {
     document.getElementById('lettersCount').textContent = appState.learned.length;
@@ -482,7 +482,7 @@ function updateProgress() {
     }
 }
 
-/* ========== ЧАСТЬ 9: МОДАЛ И СОБЫТИЯ ========== */
+/* ========== ЧАСТЬ 9: МОДАЛ И СОБЫТИЯ */
 
 document.addEventListener('click', function(event) {
     const modal = document.getElementById('letterModal');
@@ -490,5 +490,3 @@ document.addEventListener('click', function(event) {
         modal.classList.remove('active');
     }
 });
-
-/* ========== КОНЕЦ СКРИПТА ========== */
